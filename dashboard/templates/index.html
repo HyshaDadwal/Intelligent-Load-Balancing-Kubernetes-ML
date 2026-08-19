@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Load Balancer Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<h2>Server CPU Load</h2>
+<canvas id="cpuChart"></canvas>
+
+<h2>Server Request Distribution</h2>
+<canvas id="requestChart"></canvas>
+
+<script>
+
+async function loadMetrics(){
+
+let res = await fetch("/metrics")
+let data = await res.json()
+
+let cpu = data.servers.map(s=>s.cpu_load)
+let requests = Object.values(data.distribution)
+
+cpuChart.data.datasets[0].data = cpu
+requestChart.data.datasets[0].data = requests
+
+cpuChart.update()
+requestChart.update()
+
+}
+
+let cpuChart = new Chart(document.getElementById("cpuChart"),{
+type:"bar",
+data:{
+labels:["Server1","Server2","Server3"],
+datasets:[{label:"CPU Load",data:[0,0,0]}]
+}
+})
+
+let requestChart = new Chart(document.getElementById("requestChart"),{
+type:"bar",
+data:{
+labels:["Server1","Server2","Server3"],
+datasets:[{label:"Requests",data:[0,0,0]}]
+}
+})
+
+setInterval(loadMetrics,2000)
+
+</script>
+
+</body>
+</html>

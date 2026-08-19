@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: intelligent-load-balancer
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: load-balancer
+
+  template:
+    metadata:
+      labels:
+        app: load-balancer
+
+    spec:
+      containers:
+      - name: load-balancer
+        image: intelligent-load-balancer:latest
+
+        ports:
+        - containerPort: 5000
