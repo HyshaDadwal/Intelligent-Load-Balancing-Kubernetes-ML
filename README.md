@@ -14,7 +14,6 @@ An ML-powered load balancer that uses a **Random Forest classifier** to intellig
 - [Benchmarks](#-benchmarks)
 - [Docker & Kubernetes](#-docker--kubernetes)
 - [Documentation](#-documentation)
-- [License](#-license)
 
 ---
 
@@ -90,7 +89,7 @@ intelligent-load-balancer/
 ├── docs/
 │   ├── DEMO_GUIDE.md           # Step-by-step live demo guide
 │   ├── architecture.png        # Architecture diagram
-│   ├── workflow.png             # Workflow diagram
+│   ├── workflow.png            # Workflow diagram
 │   └── project_report.pdf      # Detailed project report
 ├── results/
 │   ├── benchmark_results.csv   # Generated benchmark data
@@ -250,10 +249,3 @@ kubectl get hpa
 ##  Documentation
 
 - [Live Demo Guide](docs/DEMO_GUIDE.md) — Step-by-step instructions for presenting a live demo
-- [Project Report](docs/project_report.pdf)
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
