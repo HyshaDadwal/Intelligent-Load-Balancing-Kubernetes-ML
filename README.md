@@ -1,17 +1,10 @@
-# 🧠 Intelligent Load Balancer
+#  Intelligent Load Balancer
 
 An ML-powered load balancer that uses a **Random Forest classifier** to intelligently route traffic across multiple backend servers based on real-time CPU load and connection metrics. Includes traditional algorithms (Round Robin, Least Connection) for benchmarking comparison.
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-3.0-green?logo=flask&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3-orange?logo=scikit-learn&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-Ready-326CE5?logo=kubernetes&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Features](#-features)
 - [Architecture](#-architecture)
@@ -25,7 +18,7 @@ An ML-powered load balancer that uses a **Random Forest classifier** to intellig
 
 ---
 
-## ✨ Features
+##  Features
 
 - **ML-Based Routing** — Random Forest model predicts the optimal server based on CPU load and active connections
 - **Multiple Algorithms** — Switch between ML, Round Robin, and Least Connection strategies at runtime
@@ -36,7 +29,7 @@ An ML-powered load balancer that uses a **Random Forest classifier** to intellig
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
                     ┌─────────────────┐
@@ -64,7 +57,7 @@ An ML-powered load balancer that uses a **Random Forest classifier** to intellig
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 intelligent-load-balancer/
@@ -112,7 +105,7 @@ intelligent-load-balancer/
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -186,7 +179,7 @@ python services/simulator.py
 
 ---
 
-## 📡 API Reference
+##  API Reference
 
 ### Load Balancer (Port 8000)
 
@@ -214,7 +207,7 @@ python services/simulator.py
 
 ---
 
-## 📊 Benchmarks
+##  Benchmarks
 
 | Algorithm | Avg Response Time | Requests/sec | Distribution |
 |-----------|------------------|--------------|--------------|
@@ -226,7 +219,7 @@ python services/simulator.py
 
 ---
 
-## 🐳 Docker & Kubernetes
+##  Docker & Kubernetes
 
 ### Docker
 
@@ -254,11 +247,9 @@ kubectl get hpa
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 - [Live Demo Guide](docs/DEMO_GUIDE.md) — Step-by-step instructions for presenting a live demo
-- [Architecture Diagram](docs/architecture.png)
-- [Workflow Diagram](docs/workflow.png)
 - [Project Report](docs/project_report.pdf)
 
 ---
